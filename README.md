@@ -55,9 +55,11 @@ yay -S t3code-bin
   };
 }
 ```
+
 ```nix
 # /path/to/your/configuration.nix
 {
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   environment.systemPackages = [
     inputs.t3code-flake.packages."x86_64-linux".default;
   ];
@@ -85,4 +87,3 @@ bun install .
 Read [CONTRIBUTING.md](./CONTRIBUTING.md) before opening an issue or PR.
 
 Need support? Join the [Discord](https://discord.gg/jn4EGJjrvv).
-
