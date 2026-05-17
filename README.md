@@ -50,11 +50,9 @@ yay -S t3code-bin
     # This flake is pinned to nixpkgs stable
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
-    t3code-flake.url = "github:pingdotgg/t3code";
+    t3code-flake.url = "github:pingdotgg/t3code";  
+      # Or pin a version: "github:pingdotgg/t3code?ref=v0.0.23"
     t3code-flake.inputs.nixpkgs.follows = "nixpkgs";
-
-    # Optional: pin to a specific release
-    # t3code-flake.releaseTag = "v0.0.23";
   };
 }
 ```
